@@ -33,9 +33,13 @@ public class LineComaprison {
 		Double Value1 = new Double(length1);
 		Double Value2 = new Double(length2);
 		
-		if(Value1.equals(Value2)) 
+		int compare = Value1.compareTo(Value2);
+		
+		if(compare == 0 ) 
 			System.out.println("Two Lines are Equal ");
+		else if(compare > 0)
+			System.out.println("Line 1 is Greater than Line 2");
 		else
-			System.out.println("Two Lines are Not Equal ");
+			System.out.println("Line 1 is Lesser than Line 2");
 	}
 }
