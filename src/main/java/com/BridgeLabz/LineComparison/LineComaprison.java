@@ -1,8 +1,34 @@
-package com.bridgeLabz.linecomparison;
+package com.bridgelabz.linecomparison;
 
 import java.util.Scanner;
 
 public class LineComaprison {
+	
+	static void Equality(double length1, double length2) {
+		
+		Double Value1 = new Double(length1);
+		Double Value2 = new Double(length2);
+		
+		if(Value1.equals(Value2)) 
+			System.out.println("Two Lines are Equal ");
+		else
+			System.out.println("Two Lines are Not Equal ");
+	}
+	
+	static void Comparison(double length1, double length2) {
+		
+		Double Value1 = new Double(length1);
+		Double Value2 = new Double(length2);
+		
+		int compare = Value1.compareTo(Value2);
+		
+		if(compare == 0 ) 
+			System.out.println("Two Lines are Equal ");
+		else if(compare > 0)
+			System.out.println("Line 1 is Greater than Line 2");
+		else
+			System.out.println("Line 1 is Lesser than Line 2");
+	}
 
 	public static void main(String[] args) {
 		
@@ -29,17 +55,8 @@ public class LineComaprison {
 		double length1 = Math.sqrt((Math.pow((x2-x1), 2))+(Math.pow((y2-y1), 2)));
 		double length2 = Math.sqrt((Math.pow((p2-p1), 2))+(Math.pow((q2-q1), 2)));
 		
-		
-		Double Value1 = new Double(length1);
-		Double Value2 = new Double(length2);
-		
-		int compare = Value1.compareTo(Value2);
-		
-		if(compare == 0 ) 
-			System.out.println("Two Lines are Equal ");
-		else if(compare > 0)
-			System.out.println("Line 1 is Greater than Line 2");
-		else
-			System.out.println("Line 1 is Lesser than Line 2");
+		Equality(length1, length2);
+		Comparison(length1, length2);
 	}
 }
+
